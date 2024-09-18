@@ -158,7 +158,19 @@ html{
 }
 
 #table-1{
-    border: 2px solid red;
     background-color: cyan;
+    border-collapse: collapse;
+}
+
+td{
+    width: 80rem;
+    border: 2px solid red;
     border-radius: 15px;
+}
+
+tr{
+    height: 100px;
+    border: 2px solid red;
+    border-radius: 15px;
+
 }
