@@ -98,7 +98,7 @@ function deptActivate(focus) {
         div4.className = "div3";
 
         const h = document.createElement("h");
-        h.innerHTML = "12345";
+        h.innerHTML = "76845";
         const p = document.createElement("p");
         p.innerHTML = "No. of books in our library";
         div3.appendChild(h);
@@ -111,7 +111,7 @@ function deptActivate(focus) {
         div1.appendChild(head);
 
         const h1 = document.createElement("h");
-        h1.innerHTML = "76845";
+        h1.innerHTML = "1234";
         const p1 = document.createElement("p");
         p1.innerHTML = "No. of editions in our library";
         div4.appendChild(h1);
@@ -167,9 +167,11 @@ function books(focus) {
     format.forEach(header => {
         const node = head.insertCell();
         node.textContent = header;
+        node.style.fontWeight = 900;
     });
     const node = head.insertCell();
     node.textContent = "Borrow";
+    node.style.fontWeight = 900;
 
     A.forEach((book, i) => {
         const row = t.insertRow();
@@ -196,6 +198,7 @@ function borrowBook(id) {
         book[4] -= 1;
         borrowed.push([book[0], uid, id]);
         console.log(borrowed);
+        alert("Borrow Succesful");
     } else {
         alert("Sorry, this book is not available.");
     }
